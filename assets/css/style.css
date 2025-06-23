@@ -1,0 +1,164 @@
+/* General Body Styles */
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    color: #333; /* Soft dark grey for general text */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+
+/* Header and Navbar Styles */
+#cabeza {
+    background-color: #E83E8C; /* Pink background for the header */
+}
+
+.container-fluid {
+    background-color: #E83E8C; /* Ensure navbar background is pink */
+}
+
+
+.navbar-brand img {
+    height: 50px; /* Adjust logo height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: white; /* White text for navigation links */
+    font-weight: 600; /* Bolder text for links */
+    text-transform: uppercase; /* Optional: Make links uppercase */
+    padding-left: 15px; /* Add some padding between links */
+    padding-right: 15px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #F8F9FA; /* Slightly brighter white for active link */
+}
+
+/* Heading Styles */
+h1, h5 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700; /* Bold weight for headings */
+    color: #444; /* Darker grey for headings */
+}
+
+h1 {
+    text-align: center; /* Center the main section titles */
+    margin-bottom: 30px; /* Space below main titles */
+    font-size: 2.5rem; /* Larger font size for main titles */
+    padding-top: 20px; /* Add padding above section titles */
+}
+
+/* Product Sections Styles */
+#sectprod1,
+#sectprod2 {
+    padding: 40px 0; /* Vertical padding for product sections */
+}
+
+/* Container for Product Cards (Flexbox Layout) */
+#sectprod1 .cards-container,
+#sectprod2 .cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    justify-content: center; /* Centra las tarjetas horizontalmente dentro de su contenedor */
+    gap: 20px; /* Uniform space between cards */
+    margin-top: 0px; /* No top margin here, handled by h1's margin-bottom */
+}
+
+/* Individual Card Styles */
+.card {
+    width: 18rem; /* Base width for each card */
+    max-width: 95%; /* Ensures cards don't overflow on small screens */
+    padding: 15px; /* Increase internal padding of cards */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Slightly stronger shadow for depth */
+    border-radius: 8px; /* Rounded borders */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+    flex-shrink: 0; /* Prevents cards from shrinking too much */
+    background-color: #fff; /* White background for cards */
+    border: none; /* Remove default Bootstrap card border */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lifts the card slightly on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+}
+
+.card-img-top {
+    border-radius: 5px; /* Slightly rounded corners for images */
+    margin-bottom: 15px; /* Space below image */
+}
+
+.card-title {
+    margin-bottom: 10px; /* Space below card title */
+    font-size: 1.3rem; /* Adjust card title font size */
+}
+
+.card-text {
+    font-size: 0.95rem; /* Adjust description text size */
+    line-height: 1.5; /* Improve readability */
+    margin-bottom: 15px; /* Space below text */
+}
+
+.list-group-item {
+    font-size: 0.9rem; /* Adjust list item font size */
+    background-color: #f8f9fa; /* Light background for list items */
+}
+
+.card-link {
+    color: #E83E8C; /* Pink color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: 600; /* Bold links */
+    margin-right: 15px; /* Space between links */
+}
+
+.card-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+/* Footer Styles */
+#foot1 {
+    background-color: #17A2B8; /* Teal background for the first footer */
+    text-align: center;
+    color: white;
+    padding: 30px 0; /* More padding for a spacious look */
+}
+
+#footer-targetas h1 {
+    display: block; /* Make the h1 take its own line */
+    margin-bottom: 20px; /* Space below "ahora aceptamos" title */
+    font-size: 1.8rem; /* Adjust font size for footer title */
+    font-weight: 600;
+}
+
+#foot1 i {
+    font-size: 45px; /* Slightly smaller icons for better proportion */
+    margin: 0 8px; /* Adjust horizontal margin between icons */
+    vertical-align: middle; /* Ensures icons are aligned */
+    color: #F8F9FA; /* Slightly off-white for icons */
+}
+
+#foot2 {
+    background-color: #E83E8C; /* Pink background for the second footer */
+    text-align: center;
+    padding: 20px 0; /* Padding for the footer with logo */
+}
+
+#foot2 img {
+    max-width: 80px; /* Max width for the footer logo */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Ensure it takes its own line for centering */
+    margin: 0 auto; /* Center the logo horizontally */
+}
+
+/* Hide footer section on small screens and show on large screens */
+.d-none.d-lg-block {
+    display: none !important; /* Force hide on small screens */
+}
+
+@media (min-width: 992px) { /* Applies only to large (lg) and up */
+    .d-none.d-lg-block {
+        display: block !important; /* Show on large screens */
+    }
+}
